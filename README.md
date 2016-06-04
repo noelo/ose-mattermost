@@ -13,10 +13,16 @@ oc process  mysql-ephemeral -n openshift -v DATABASE_SERVICE_NAME=mmmysqldb -v M
 oc new-app https://github.com/noelo/ose-mattermost.git
 ```
 
-TODO: OSE Config maps for custom configuration
+## Expose the route
+```
+oc expose service ose-mattermost
+```
 
-TODO: Persistent database
+### To Do
 
-TODO: Persistent volume for mattermost data
-
-TODO: nginx sidecar pod integration
+1. OSE Config maps for custom configuration
+2. Persistent database
+3. Persistent volume for mattermost data
+4. nginx sidecar pod integration
+5. Integrate auth provider
+6. SSL Integration
